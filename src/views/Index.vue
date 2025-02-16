@@ -91,18 +91,18 @@ const closeAll = async () => {
 
 <template>
   <div class="container">
-    <div class="border-4 border-gray-700 rounded-xl m-auto md:w-[600px] flex flex-wrap gap-2 items-center justify-center py-12 px-2 m-2">
+    <div class=" rounded-xl m-auto md:w-[600px] flex flex-wrap gap-2 items-center justify-center px-4 py-12">
       <Box @open="openBox" @ready="boxReady" v-for="(i, idx) of random" :name="flagList[i].name" :id="idx" width="80" height="80" depth="6">
         <template #front>
           <p v-if="debug">
             {{ flagList[i].name }}
           </p>
-          <div class= "h-full w-full bg-gray-300 flex items-center justify-center text-gray-300">
+          <div class= "h-full w-full bg-green-200 flex items-center justify-center text-green-400">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 5a1 1 0 0 1 .3-.714a6 6 0 0 1 8.213-.176l.351.328a4 4 0 0 0 5.272 0l.249-.227c.61-.483 1.527-.097 1.61.676L20 5v9a1 1 0 0 1-.3.714a6 6 0 0 1-8.213.176l-.351-.328A4 4 0 0 0 6 14.448V21a1 1 0 0 1-1.993.117L4 21z"/></svg>
           </div>
         </template>
         <template #back>
-          <img :src="getImage(flagList[i].idx)" class="object-cover h-full w-full bg-amber-600" />
+          <img :src="getImage(flagList[i].idx)" class="object-cover h-full w-full bg-green-200" />
         </template>
       </Box>
     </div>

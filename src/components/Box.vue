@@ -69,17 +69,17 @@ onMounted(() => {
 </script>
 
 <template>
-  <div @click="onClick" ref="mainBox" :style="box" class="border-black box relative border-gray-300">
-    <div :style="front" class="border-2 border-black absolute top-0 left-0 w-full h-full bg-green-200">
+  <div @click="onClick" ref="mainBox" :style="box" class=" border-black box relative border-gray-300">
+    <div :style="front" class="border-4 absolute top-0 left-0 w-full h-full">
       <slot name="front"></slot>
     </div>
-    <div :style="back" class=" border-2 border-black absolute top-0 left-0 w-full h-full bg-green-400">
+    <div :style="back" class="border-2 absolute top-0 left-0 w-full h-full bg-green-400">
       <div class="scale-x-[-1] h-full w-full">
         <slot name="back"></slot>
       </div>
     </div>
-    <div :style="right" class="bg-black absolute top-0 right-0 h-full"></div>
-    <div :style="left" class="bg-black  absolute top-0 left-0 h-full"></div>
+    <div :style="right" class="bg-green-400 absolute top-0 right-0 h-full"></div>
+    <div :style="left" class="bg-green-400  absolute top-0 left-0 h-full"></div>
     <div :style="top" class="top absolute top-0 left-0 w-full bg-gray-900">
       <slot name="top"></slot>
     </div>
